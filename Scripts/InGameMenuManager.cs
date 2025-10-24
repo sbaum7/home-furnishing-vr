@@ -49,10 +49,11 @@ public class InGameMenuManager : MonoBehaviour
         isMenuOpen = false;
     }
 
+    // ui for this not implemented yet
     void ReturnToMainMenu()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("StartMenu"); // Make sure StartMenu is in Build Settings
+        SceneManager.LoadScene("StartMenu"); 
     }
 
     void QuitGame()
@@ -61,4 +62,5 @@ public class InGameMenuManager : MonoBehaviour
         Application.Quit();
     }
 }
+
 
