@@ -24,6 +24,42 @@ Connect headset to PC
 
 Install the APK similar to adb install home-furnishing-vr.apk
 
+# Version One Release Notes 
+
+ 
+
+Menu 
+
+	- Menu features difficulties 
+
+	- Checkbox for hints added 
+
+	- Start game button added 
+
+ 
+
+Grabbable Objects 
+
+	- The objects in our living room scene are grabbable in a VR environment 
+
+	- utilizing XR Interaction Toolkit 
+
+ 
+
+Movement 
+
+	- Movement around scene 
+
+	- Gravity implemented 
+
+ 
+
+Consistency with Milestone 1 
+
+Done: M1 - Planning, Project scope, GitHub setup, Unity initialized 
+
+Features not yet implemented: Logic for hint and quit button not implemented yet. The script InGameMenuManager.cs in menu-v1 is not yet working. This menu will be for pausing and playing the game within the different room scenes. 
+
 
 
 
