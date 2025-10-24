@@ -16,7 +16,7 @@ public class StartMenuManager : MonoBehaviour
 
     void Start()
     {
-        // Populate dropdown with room scene options (replace with your actual scene names)
+        // Populate dropdown with room scene options
         roomDropdown.ClearOptions();
         roomDropdown.AddOptions(new System.Collections.Generic.List<string> {
       "Bedroom",
@@ -56,10 +56,11 @@ public class StartMenuManager : MonoBehaviour
         SceneManager.LoadScene(selectedRoomScene);
     }
 
-    // Optional: handle Quit button
+    // Optional: handle Quit button, not yet working
     void OnQuitGame()
     {
         Debug.Log("Quit Game clicked");
         Application.Quit();
     }
 }
+
