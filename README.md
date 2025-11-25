@@ -63,16 +63,22 @@ Features not yet implemented: Logic for hint and quit button not implemented yet
 # Milestone 2 Release Notes 
 
 Features implemented separately but not yet integrated
+
 	- Furniture Tabs 
+	
 	- Snap Hooks
+	
 	- Movement and Grabbable Objects
 
 
 # Milestone 3 Release Notes 
 
 Features implemented separately but not yet integrated
+
 	- Pause Menu
+	
 	- Modified snap turning and teleportation for movement
+	
 	- Starting scene logic and initial item placement logic within room
 
 The above features can be found in these branches: living-room-matching-v1, pause-menu, snap-hooks
