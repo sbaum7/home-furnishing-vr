@@ -81,7 +81,7 @@ Features implemented separately but not yet integrated
 	
 	- Starting scene logic and initial item placement logic within room
 
-The above features can be found in these branches: living-room-matching-v1, pause-menu, snap-hooks
+The above features can be found in these branches: living-room-matching-v1, menus-v2, snap-hooks
 
 
 
