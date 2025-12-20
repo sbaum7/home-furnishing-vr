@@ -98,3 +98,45 @@ Features implemented separately but not yet integrated
 	- Starting scene logic and initial item placement logic within room
 
 The above features can be found in these branches: living-room-matching-v1, menus-v2, snap-hooks
+
+# Milestone 4 Release Notes 
+
+Furniture Interactions
+
+	- Furniture spawning functional in VR
+	
+	- Prefab icons replaced furniture tab buttons
+
+Scene Enhancements
+
+	- New lamp object + socket added
+
+	- Item spawn system implemented
+
+	- Object hint/highlight system added
+
+# Milestone 5 Release Notes 
+
+VR Functionality
+
+	- Menus fully clickable in VR
+	
+	- Simplified menu design using labels instead of icons
+
+	- Controller mapping finalized and tested in XR Device Simulator
+
+Scene & Object Updates
+
+	- Living room collision issues resolved
+
+	- Socket logic refined
+
+	- Gravity script finalized for all objects
+
+Documentation
+
+	- Final project report completed
+
+
+
+
