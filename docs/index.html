@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture Placement VR Game - Documentation</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background: #f9f9f9; color: #333; line-height: 1.6; }
+        h1, h2, h3 { color: #2c3e50; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .container { max-width: 1000px; margin: auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 0 15px rgba(0,0,0,0.1); }
+        nav { background: #34495e; padding: 15px; border-radius: 8px; margin-bottom: 30px; }
+        nav a { color: white; margin: 0 15px; font-weight: bold; }
+        .section { margin-bottom: 40px; }
+        .file-list, .class-list { list-style: none; padding: 0; }
+        .file-list li, .class-list li { padding: 10px; background: #ecf0f1; margin: 8px 0; border-radius: 5px; }
+        pre { background: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto; }
+        footer { text-align: center; margin-top: 50px; color: #7f8c8d; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Furniture Placement VR Game</h1>
+    <p><strong>Capstone Project Documentation</strong><br>
+       A Unity XR application for arranging furniture in virtual rooms with different difficulty levels and optional hints.</p>
+
+    <nav>
+        <a href="#overview">Project Overview</a>
+        <a href="#files">Source Files</a>
+        <a href="#classes">Classes</a>
+    </nav>
+
+    <div class="section" id="overview">
+        <h2>Project Overview</h2>
+        <p>This VR game allows players to arrange furniture in virtual rooms (Living Room, Bedroom, Kitchen) using XR Interaction Toolkit. Players select difficulty and hint options from a start menu, spawn furniture via radial menus or tabs, and place items into designated sockets. Levels are completed when all items are correctly placed, triggering confetti and progression to the next scene.</p>
+        <p>Key features:</p>
+        <ul>
+            <li>Difficulty selection with/without hints</li>
+            <li>Radial menu spawning with floor-clipping prevention</li>
+            <li>Socket-based placement validation</li>
+            <li>Confetti celebration on level completion</li>
+            <li>Pause menu and physics restoration on release</li>
+        </ul>
+    </div>
+
+    <div class="section" id="files">
+        <h2>Source Files</h2>
+        <ul class="file-list">
+            <li><a href="#PauseMenu">PauseMenu.cs</a> – Handles pause menu resume/quit functionality</li>
+            <li><a href="#LivingRoomLevelManager">LivingRoomLevelManager.cs</a> – Level completion check for Living Room</li>
+            <li><a href="#PlacementChecker">PlacementChecker.cs</a> – Validates individual socket placement</li>
+            <li><a href="#ItemId">ItemId.cs</a> – Simple ID component for furniture identification</li>
+            <li><a href="#RestorePhysics">RestorePhysics.cs</a> – Restores physics after grabbing</li>
+            <li><a href="#PlacementManager">PlacementManager.cs</a> – Central level completion manager with confetti</li>
+            <li><a href="#FurnitureSpawner">FurnitureSpawner.cs</a> – Single-item spawner utility</li>
+            <li><a href="#StartMenuManager">StartMenuManager.cs</a> – Main menu with difficulty/hints selection</li>
+            <li><a href="#RoomTabsMenu">RoomTabsMenu.cs</a> – VR radial menu for furniture spawning</li>
+            <li><a href="#FurniturePager">FurniturePager.cs</a> – Category-based multi-item spawner</li>
+            <li><a href="#StudyStartButton">StudyStartButton.cs</a> – Simple scene-loading button</li>
+            <li><a href="#SimpleSpawn">SimpleSpawn.cs</a> (TabsControl.cs) – Quick test spawner</li>
+        </ul>
+    </div>
+
+    <div class="section" id="classes">
+        <h2>Classes</h2>
+        <ul class="class-list">
+            <li><a href="#PauseMenu">PauseMenu</a></li>
+            <li><a href="#LivingRoomLevelManager">LivingRoomLevelManager</a></li>
+            <li><a href="#PlacementChecker">PlacementChecker</a></li>
+            <li><a href="#ItemId">ItemId</a></li>
+            <li><a href="#RestorePhysics">RestorePhysics</a></li>
+            <li><a href="#PlacementManager">PlacementManager</a></li>
+            <li><a href="#FurnitureSpawner">FurnitureSpawner</a></li>
+            <li><a href="#StartMenuManager">StartMenuManager</a></li>
+            <li><a href="#RoomTabsMenu">RoomTabsMenu</a></li>
+            <li><a href="#FurniturePager">FurniturePager</a></li>
+            <li><a href="#StudyStartButton">StudyStartButton</a></li>
+            <li><a href="#SimpleSpawn">SimpleSpawn</a></li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Detailed Class Documentation</h2>
+
+        <h3 id="PauseMenu">PauseMenu</h3>
+        <p>Handles the in-game pause menu functionality, including resuming the game and quitting to a specified scene.</p>
+
+        <h3 id="LivingRoomLevelManager">LivingRoomLevelManager</h3>
+        <p>Manages level completion logic for the Living Room scene by checking correct placement of specific furniture items.</p>
+
+        <h3 id="PlacementChecker">PlacementChecker</h3>
+        <p>Monitors a single XR Socket for correct item placement and notifies the PlacementManager.</p>
+
+        <h3 id="ItemId">ItemId</h3>
+        <p>Simple component that assigns a unique string identifier to furniture items for validation.</p>
+
+        <h3 id="RestorePhysics">RestorePhysics</h3>
+        <p>Restores original physics settings (gravity/kinematic) after an object is released from grabbing.</p>
+
+        <h3 id="PlacementManager">PlacementManager</h3>
+        <p>Central manager that tracks all socket placements, triggers confetti, and loads the next scene on completion.</p>
+
+        <h3 id="FurnitureSpawner">FurnitureSpawner</h3>
+        <p>Utility for spawning and replacing a single furniture item at a fixed location.</p>
+
+        <h3 id="StartMenuManager">StartMenuManager</h3>
+        <p>Manages the main menu UI: difficulty selection, hints toggle, and scene loading.</p>
+
+        <h3 id="RoomTabsMenu">RoomTabsMenu</h3>
+        <p>VR radial/tab menu toggled by controller input; spawns furniture with offset to avoid floor clipping.</p>
+
+        <h3 id="FurniturePager">FurniturePager</h3>
+        <p>Spawns an entire category of furniture items at predefined points when a button is pressed.</p>
+
+        <h3 id="StudyStartButton">StudyStartButton</h3>
+        <p>Simple button handler that loads a configured scene.</p>
+
+        <h3 id="SimpleSpawn">SimpleSpawn</h3>
+        <p>Quick testing utility for spawning furniture by index (originally in TabsControl.cs).</p>
+    </div>
+
+    <footer>
+        Generated for Capstone Final Submission | December 2025<br>
+        All code is fully documented with Doxygen-compatible comments.
+    </footer>
+</div>
+</body>
+</html>

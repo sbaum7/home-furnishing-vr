@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "VRControls",
+    "maps": [
+        {
+            "name": "XR",
+            "id": "beb3e314-bafd-4818-9771-4f8cd84e03f8",
+            "actions": [
+                {
+                    "name": "Menu",
+                    "type": "Button",
+                    "id": "0bb1f675-c30f-40ee-a902-9462c3062062",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "bc1d3bbc-39ad-4ff6-a608-d10c50851439",
+                    "path": "<XRController>{LeftHand}/{MenuButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Menu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
