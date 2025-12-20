@@ -117,6 +117,7 @@ Scene Enhancements
 
 # Milestone 5 Release Notes 
 
+Home Furnishing VR App is fully functioning properly.
 VR Functionality
 
 	- Menus fully clickable in VR
